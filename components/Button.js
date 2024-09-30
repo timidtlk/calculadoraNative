@@ -24,7 +24,8 @@ const style = StyleSheet.create({
         backgroundColor: '#f0f0f0',
         textAlign: 'center',
         borderWidth: 1,
-        borderColor: '#888'
+        borderColor: '#888',
+        fontFamily: "Helvetica Neue"
     },
     operationButton: {
         color: '#fff',

@@ -1,9 +1,14 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { useFonts } from 'expo-font';
 
 export default props => {
-    return (
 
+    const [loaded, error] = useFonts({
+        'Helvetica Neue': require('../assets/fonts/HelveticaNeueUltraLight.otf'),
+    });
+
+    return (
         <View style={style.display}>
             <Text numberOfLines={1} style={style.displayValue}>{props.value}</Text>
         </View>
@@ -20,6 +25,7 @@ const style = StyleSheet.create({
     },
     displayValue: {
         fontSize: 60,
-        color: "#fff"
+        fontFamily: "Helvetica Neue",
+        color: "#fff",
     }
 });
